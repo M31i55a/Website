@@ -10,7 +10,6 @@ import About from './pages/Service1';
 import Blog from './pages/Service2';
 import Portfolio from './pages/Portofolio';
 import Loading from './pages/Loading';
-import ProfileNav from './pages/ProfileNav';
 import './App.css';
 
 // Define page order for navigation
