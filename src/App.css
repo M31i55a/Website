@@ -1,0 +1,88 @@
+
+
+.App {
+  text-align: center;
+}
+
+
+.about_container{
+  cursor: pointer;
+}
+
+.bottom_bar{
+
+}
+
+.bottom_bar_fill{
+  left: 12.5%;
+  width: 0%;
+  transition: all 0.5s ease-in-out;
+  border-color: #E7501E;
+}
+
+.about_container:hover .bottom_bar_fill{
+  width: 75%;
+  opacity: 1;
+}
+
+
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  right: 1.56vw;
+  top: 0;
+  height: 100vh; 
+  width: 100px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  padding: 20px 10px; 
+  overflow-y: auto; 
+  z-index: 1000;
+  transition: all ease-in-out 0.3s; 
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  margin: 5px 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  transition: background-color 0.3s;
+  width: 100px; 
+  text-align: center; 
+  transform: rotate(90deg); 
+  transform-origin: center; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease-in-out 0.3s; 
+}
+
+.navbar a:hover {
+  width: 180px;
+}
+
+.navbar a.active {
+  /* background-color: #007bff; */
+  /* border-radius: 5px; */
+}
+
+/* .page {
+  margin-right: 220px;
+  padding: 20px;
+  min-height: 100vh;
+} */
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+
+/* Prevent default vertical scrolling */
+body {
+  overflow: hidden;
+}

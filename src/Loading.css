@@ -1,0 +1,119 @@
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Above all content */
+    overflow: hidden;
+    will-change: transform, opacity, filter, background-color;
+  }
+  
+  .loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: 10; /* Above particles */
+  }
+  
+  .loading-bar-container {
+    width: 300px; /* Adjustable */
+    height: 20px;
+    background-color: #444;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .loading-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #007bff, #00c4ff);
+    border-radius: 10px;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+  
+  .loading-counter {
+    font-size: 2em;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 123, 255, 0.8);
+    animation: bounce 0.2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .loading-circle {
+    transform: rotate(-90deg); /* Start at top */
+  }
+  
+  .loading-circle .primary-circle {
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 5px rgba(0, 123, 255, 0.8));
+  }
+  
+  .loading-circle .secondary-circle {
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 3px rgba(0, 196, 255, 0.6));
+  }
+  
+  .particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    will-change: transform, opacity, scale;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .loading-bar-container {
+      width: 200px;
+    }
+  
+    .loading-counter {
+      font-size: 1.5em;
+    }
+  
+    .loading-circle {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .loading-circle .primary-circle {
+      r: 35;
+      stroke-width: 8;
+    }
+  
+    .loading-circle .secondary-circle {
+      r: 25;
+      stroke-width: 4;
+    }
+  
+    .particle {
+      width: 8px;
+      height: 8px;
+    }
+  }
